@@ -28,6 +28,7 @@ clf=clf.fit(X_train,y_train)
 predictions = clf.predict(X_test)
 
 from sklearn import metrics
+
 print(metrics.accuracy_score(y_test, predictions))
 
 
@@ -43,3 +44,18 @@ gnb=gnb.fit(X_train,y_train)
 Gpredictions=gnb.predict(X_test)
 
 print(metrics.accuracy_score(y_test, Gpredictions))
+
+#Perceptron
+
+from sklearn.linear_model import Perceptron
+
+model = Perceptron()
+
+model.fit(X_train,y_train)
+
+LRprediction=model.predict(X_test)
+
+print('The accuracy of the Perceptron is',metrics.accuracy_score(LRprediction,y_test))
+
+
+
